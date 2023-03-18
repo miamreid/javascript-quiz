@@ -33,40 +33,40 @@ function startTimer() {
 
 startButtonEl.addEventListener("click", startQuizTimer);
 startButtonEl.addEventListener("click", startQuiz);
+startButtonEl.addEventListener("click", question1);
 
 function question1() {
-    var firstQ = document.querySelector("#question-1");
-    if(firstQ.style.display === "none") {
-        firstQ.style.display = "block";
-    } else {firstQ.style.display = "none"}
+   document.querySelector(".question-1").style.display = "block";
 }
 
 function question2() {
-    var secondQ = document.querySelector("#question-2");
-    if(secondQ.style.display === "none") {
-        secondQ.style.display = "block";
-    } else {secondQ.style.display = "none"}
+    document.querySelector(".question-2").style.display="block";
+    document.querySelector(".question-1").style.display="none";
 }
 
 function question3() {
-    var thirdQ = document.querySelector("#question-3");
-    if(thirdQ.style.display === "none") {
-        thirdQ.style.display = "block";
-    } else {thirdQ.style.display = "none"}
+    document.querySelector(".question-3").style.display="block";
+    document.querySelector(".question-2").style.display="none";
 }
 
 function question4() {
-    var fourthQ = document.querySelector("#question-4");
-    if(fourthQ.style.display === "none") {
-        fourthQ.style.display = "block";
-    } else {fourthQ.style.display = "none"}
+    document.querySelector(".question-4").style.display="block";
+    document.querySelector(".question-3").style.display="none";
 }
 
 function question5() {
-    var fifthQ = document.querySelector("#question-5");
-    if(fifthQ.style.display === "none") {
-        fifthQ.style.display = "block";
-    } else {fifthQ.style.display = "none"}
+    document.querySelector(".question-5").style.display="block";
+    document.querySelector(".question-4").style.display="none";
+}
+
+function results() {
+    document.querySelector(".results").style.display="block";
+    document.querySelector(".question-5").style.display="none";
+}
+
+function highscores() {
+    document.querySelector(".highscores").style.display="block";
+    document.querySelector(".results").style.display="none";
 }
 
 

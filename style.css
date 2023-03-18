@@ -2,22 +2,32 @@
     text-align: center;
 }
 
-#question-1 {
-    text-align: center;
+.question-1 {
+    display: none;
 }
 
-#question-2 {
-    text-align: center;
+.question-2 {
+    display: none;
+    
 }
 
-#question-3 {
-    text-align: center;
+.question-3 {
+    display: none;
 }
 
-#question-4 {
-    text-align: center;
+.question-4 {
+    display: none;
+    
 }
 
-#question-5 {
-    text-align: center;
+.question-5 {
+    display: none;   
+}
+
+.results {
+    display: none;
+}
+
+.highscores {
+    display: none;
 }
