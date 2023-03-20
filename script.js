@@ -7,9 +7,7 @@ var startButtonEl = document.querySelector("#start");
 var timerEl = document.querySelector("#seconds");
 var timer;
 var timerCount;
-
-var correctButtonEl = document.querySelector(".correct");
-var wrongButtonEl = document.querySelector(".wrong");
+var answer = document.querySelector("#answer");
 var submitButtonEl = document.querySelector(".submit-button");
 
 var isDone = false;
@@ -50,6 +48,11 @@ function startTimer() {
 
 // Subtracts seconds from timer when wrong answer is selected
 function subTime() {
+    document.getElementById("answer-1").innerHTML = "Wrong!";
+    document.getElementById("answer-2").innerHTML = "Wrong!";
+    document.getElementById("answer-3").innerHTML = "Wrong!";
+    document.getElementById("answer-4").innerHTML = "Wrong!";
+    document.getElementById("answer-5").innerHTML = "Wrong!";
     timerCount-= 7;
     timerEl.textContent = timerCount;
 
@@ -59,6 +62,7 @@ function subTime() {
         results();
     }
 }
+
 
 startButtonEl.addEventListener("click", startQuizTimer);
 startButtonEl.addEventListener("click", startQuiz);
@@ -72,21 +76,25 @@ function question1() {
 function question2() {
     document.querySelector(".question-2").style.display="block";
     document.querySelector(".question-1").style.display="none";
+    document.getElementById("answer-2").innerHTML = "Correct!";
 }
 
 function question3() {
     document.querySelector(".question-3").style.display="block";
     document.querySelector(".question-2").style.display="none";
+    document.getElementById("answer-3").innerHTML = "Correct!";
 }
 
 function question4() {
     document.querySelector(".question-4").style.display="block";
     document.querySelector(".question-3").style.display="none";
+    document.getElementById("answer-4").innerHTML = "Correct!";
 }
 
 function question5() {
     document.querySelector(".question-5").style.display="block";
     document.querySelector(".question-4").style.display="none";
+    document.getElementById("answer-5").innerHTML = "Correct!";
 }
 
 function results() {
@@ -112,12 +120,15 @@ function highscores() {
     document.querySelector(".question-2").style.display="none";
     document.querySelector(".question-1").style.display="none";
     document.querySelector("#screen-1").style.display="none";
+    document.querySelector(".hide").style.display="none";
+    document.querySelector(".timer").style.display="none";
     isDone = true;
 }
 
 function pushData() {
     let highscoreList = document.getElementById("highscore-list");
     let li = document.createElement("li");
+    li.classList.add("user-score");
     var inputText = document.getElementById("initials").value + " - " + timeLeft;
     var node = document.createTextNode(inputText);
     li.appendChild(node);
@@ -127,35 +138,15 @@ function pushData() {
 function resetQuiz() {
     document.querySelector(".highscores").style.display="none";
     document.querySelector("#screen-1").style.display="block";
+    document.querySelector(".hide").style.display="block";
+    document.querySelector(".timer").style.display="block";
     timerCount = 75;
     timerEl.textContent = timerCount;
-    document.getElementById("quiz-results").innerHTML = "";
+    document.getElementById("quiz-results").innerHTML = "Your final score is: ";
     document.getElementById("initials").value = "";
 }
 
 function clearScores() {
-    let highscoreList = document.getElementById("highscore-list");
+    let highscoreList = document.querySelector(".user-score");
     highscoreList.remove();
 }
-
-
-
-/*End game
-//Create variables for end game screen
-//Function for end screen when timer equals 0 or all questions are answered
-//Conditions that timer = 0 OR all questions done
-*/
-
-/*Correct answers shown
-//Create variable for correct answer text
-//Condition = correct answer
-*/
-
-/*Incorrect answer
-//Create variable for incorrect answer text
-//Create function to reduce timer if incorrect answer selected
-//Condition = incorrect answer
-*/
-
-
-

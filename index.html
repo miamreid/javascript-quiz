@@ -9,12 +9,12 @@
 </head>
 <body>
     <header>
-        <div class="hide">
+        <nav class="hide">
        <a href="#see-scores" onclick="highscores()">View Highscores</a>
+       </nav>
        <div class="timer">
-       <p id="#timer-text">Time:</p><p id="seconds">75</p>
+       <p id="#timer-text">Time:<span id="seconds"> 75</span></p>
     </div>
-        </div>
     </header>
         <div id="screen-1">
         <h1>Coding Quiz Challenge</h1>
@@ -25,53 +25,57 @@
         </div>
         <div class="question-1">
             <h2>Commonly used data types DO Not Include:</h2>
-            <button onclick="subTime()" class="wrong">1. strings</button>
-            <button onclick="subTime()" class="wrong">2. booleans</button>
-            <button onclick="question2()" class="correct">3. alerts</button>
-            <button onclick="subTime()" class="wrong">4. numbers</button>
+            <button onclick="subTime()" class="wrong">1. strings</button><br>
+            <button onclick="subTime()" class="wrong">2. booleans</button><br>
+            <button onclick="question2()" class="correct">3. alerts</button><br>
+            <button onclick="subTime()" class="wrong">4. numbers</button><br>
+            <p id="answer-1"></p>
         </div>
         <div class="question-2">
             <h2>The condition in an if / else statement is enclosed with _______.</h2>
-            <button onclick="subTime()" class="wrong">1. quotes</button>
-            <button onclick="question3()" class="correct">2. curly brackets</button>
-            <button onclick="subTime()" class="wrong">3. parenthesis</button>
-            <button onclick="subTime()" class="wrong">4. square brackets</button>
+            <button onclick="subTime()" class="wrong">1. quotes</button><br>
+            <button onclick="question3()" class="correct">2. curly brackets</button><br>
+            <button onclick="subTime()" class="wrong">3. parenthesis</button><br>
+            <button onclick="subTime()" class="wrong">4. square brackets</button><br>
+            <p id="answer-2">Correct!</p>
         </div>
         <div class="question-3">
             <h2>Arrays in JavaScript can be used to store _______.</h2>
                 <button onclick="subTime()" class="wrong">1. numbers and strings</button><br>
                 <button onclick="subTime()" class="wrong">2. other arrays</button><br>
                 <button onclick="subTime()" class="wrong">3. booleans</button><br>
-                <button onclick="question4()" class="correct">4. all of the above</button>
+                <button onclick="question4()" class="correct">4. all of the above</button><br>
+                <p id="answer-3">Correct!</p>
         </div>
         <div class="question-4">
             <h2>String values must be enclosed within _______ when being assigned to variables.</h2>
                 <button onclick="subTime()" class="wrong">1. commas</button><br>
                 <button onclick="subTime()" class="wrong">2. curly brackets</button><br>
                 <button onclick="question5()" class="correct">3. quotes</button><br>
-                <button onclick="subTime()" class="wrong">4. parenthesis</button>
+                <button onclick="subTime()" class="wrong">4. parenthesis</button><br>
+                <p id="answer-4">Correct!</p>
         </div>
         <div class="question-5">
             <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
                 <button onclick="subTime()" class="wrong">1. JavaScript</button><br>
                 <button onclick="subTime()" class="wrong">2. terminal/bash</button><br>
                 <button onclick="subTime()" class="wrong">3. parenthesis</button><br>
-                <button onclick="results()" class="correct">4. console.log</button>
+                <button onclick="results()" class="correct">4. console.log</button><br>
+                <p id="answer-5">Correct!</p>
         </div>
         <div class="results">
             <h2>All done!</h2>
             <p id="quiz-results">Your final score is: </p>
                 <label for="name">Enter initials:</label>
                 <input type="text" id="initials" name="text" /><button onclick="pushData();" class="submit-button">Submit</button>
-        </div>
+            </div>
         <div id= "see-scores" class="highscores">
             <h2>Highscores</h2>
             <ol id="highscore-list">
                 </ol>
             <p id="scoresCounter"></p>
-            <button onclick="resetQuiz()">Go back</button><button onclick="clearScores()">Clear high scores</button>
+            <button class="reset" onclick="resetQuiz()">Go back</button><button class="clear" onclick="clearScores()">Clear high scores</button>
         </div>
-
     <script src="../javascript-quiz/script.js"></script>
 </body>
 </html>
