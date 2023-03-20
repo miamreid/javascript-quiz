@@ -1,33 +1,110 @@
+:root {
+    --purple: blueviolet;
+    --darkpurple: indigo;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    font-size: 48px;
+}
+
+p, label, a {
+    font-size: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+button {
+    background-color: var(--darkpurple);
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    height: 60px;
+    font-size: 24px;
+    border-style: none;
+    margin: 10px;
+    text-align: left;
+}
+
+button:hover {
+    background-color: var(--purple);
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+input {
+    margin: 10px;
+    height: 26px;
+    font-size: 24px;
+}
+
+.submit-button, .reset, .clear {
+    width: auto;
+    text-align: center;
+    height: auto;
+    padding: 15px;
+}
+
 #screen-1 {
+    text-align: center;
+    padding: 50px;
+}
+
+#start {
     text-align: center;
 }
 
-.question-1 {
+.question-1, .question-2, .question-3, .question-4, .question-5, .results, .highscores {
     display: none;
+    padding: 75px;
+    text-align: left;
 }
 
-.question-2 {
-    display: none;
-    
+ol li {
+    color: black;
+    background-color: lavender;
+    width: 100%;
+    font-size: 24px;
+    padding: 10px;
 }
 
-.question-3 {
-    display: none;
+#answer-1, #answer-2, #answer-3, #answer-4, #answer-5 {
+    font-style:italic;
+    color: lightslategray;
+    font-size: 24px;
 }
 
-.question-4 {
-    display: none;
-    
-}
+@media screen and (max-width: 554px) {
+    header {
+        flex-direction: column;
+        padding: 25px;
+    }
 
-.question-5 {
-    display: none;   
-}
+    #start {
+        width: 75%;
+        height: 75%;
+    }
 
-.results {
-    display: none;
-}
+    #screen-1 {
+        padding: 15px;
+    }
 
-.highscores {
-    display: none;
+    .question-1, .question-2, .question-3, .question-4, .question-5, .results, .highscores {
+        padding: 15px;
+    }
 }
