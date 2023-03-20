@@ -9,7 +9,8 @@ I learned about using functions to display or hide elements, and making function
 
 ## Usage
 
-![screenshot of my page](../javascript-quiz/assets/Screen%20Shot%202023-03-19%20at%209.51.58%20PM.png)
+![screenshot of my page]
+<img width="1692" alt="Screen Shot 2023-03-19 at 9 51 58 PM" src="https://user-images.githubusercontent.com/124822025/226229854-0dfcf059-41fc-4bdd-a203-c1817ed7b61f.png">
 
 Users that take this quiz are timed and able to see their highscores, test their knowledge and see when they choose incorrect or correct answers, start the quiz over, or clear the scores saved. When the user selects a wrong answer, the timer decreases by 7 seconds. When the timer gets to 0, the quiz ends and the user is brought to the results screen.
 
